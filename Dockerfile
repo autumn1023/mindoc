@@ -90,6 +90,7 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ENV ZONEINFO=/mindoc/lib/time/zoneinfo.zip
+ADD start.sh ./
 RUN chmod +x start.sh
 
 CMD ["./start.sh"]
